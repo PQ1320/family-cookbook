@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- 背景圆 -->
+  <circle cx="256" cy="256" r="240" fill="#1a1a2e"/>
+  <circle cx="256" cy="256" r="220" fill="#16213e"/>
+  <!-- 锅/碗 -->
+  <ellipse cx="256" cy="260" rx="100" ry="80" fill="#0f3460" stroke="#e94560" stroke-width="6"/>
+  <ellipse cx="256" cy="260" rx="70" ry="52" fill="#e94560" opacity="0.3"/>
+  <!-- 蒸汽 -->
+  <path d="M200 160 Q195 140 200 120" stroke="#eaeaea" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M256 150 Q251 125 256 100" stroke="#eaeaea" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M312 160 Q307 140 312 120" stroke="#eaeaea" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>
