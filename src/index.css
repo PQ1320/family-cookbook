@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+/* ========== 全局变量（暖咖啡浅色主题） ========== */
+:root {
+  --color-bg: #fcf9f2;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-accent: #c8956c;
+  --color-accent-soft: #f5ebe0;
+  --color-accent-warm: #d4a373;
+  --color-text-primary: #3d2c1e;
+  --color-text-secondary: #8b7355;
+  --color-text-muted: #bfa98a;
+  --color-border: #f0e8da;
+  --color-border-strong: #e0d4c0;
+  --color-success: #8db580;
+  --color-warning: #d4a373;
+  --color-badge-bg: #fdf2e4;
+  --color-badge-warm: #faf0e6;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* ========== 全局重置 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ========== 滚动条美化 ========== */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 2px;
+}
+
+/* ========== 图片样式 ========== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== 输入框全局样式 ========== */
+input, textarea, select {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* ========== 按钮全局样式 ========== */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ========== 底部安全距离（适配全面屏） ========== */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* ========== 隐藏滚动条 ========== */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
